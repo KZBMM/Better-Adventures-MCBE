@@ -1,6 +1,5 @@
 import * as minecraft_main_server from '@minecraft/server';
-import * as minecraft_main_ui from '@minecraft/server-ui';
-import * as lib0 from './getRandomInt.js';
+import * as lib0 from '../libraries/getRandomInt.js';
 
 export function generateNameMan() {
 	let preprefix = [ "A'", "E'", "Ae'", "Ea'", "Y'", "", "", "Ay'", "Ey'", "Ai'", "Yr'", "O'", "G'", '', '', '', '', '', '', '', '', '', '', '', '', '' ];

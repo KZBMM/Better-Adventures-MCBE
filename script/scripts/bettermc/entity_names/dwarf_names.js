@@ -1,13 +1,12 @@
 import * as minecraft_main_server from '@minecraft/server';
-import * as minecraft_main_ui from '@minecraft/server-ui';
-import * as lib0 from './getRandomInt.js';
+import * as lib0 from '../libraries/getRandomInt.js';
 
 export function generateNameMan() {
 	const l0 = [ "V", "B", "J", "G", "Th", "D", "Dh", "C", "M", "N", "F", "H", "K", "L", "P", "R", "T", "Z" ];
-	const l1 = [ "o", "ö", "i", "å", "in" ];
+	const l1 = [ "o", "ö", "i", "å", "in", "ri" ];
 	const l01 = [ "r", "v", "rn", "p", "l", "d", "s", "f", "gh" ];
-	var prefix = [ "", ( l0[lib0.getRandomInt(0, 17)] + l1[lib0.getRandomInt(0, 4)] + l01[lib0.getRandomInt(0, 8)] + ' ' ) ];
-	var suffix = l0[lib0.getRandomInt(0, 17)] + l1[lib0.getRandomInt(0, 4)] + l01[lib0.getRandomInt(0, 8)] + l1[lib0.getRandomInt(0, 4)];
+	var prefix = [ "", ( l0[lib0.getRandomInt(0, 17)] + l1[lib0.getRandomInt(0, 5)] + l01[lib0.getRandomInt(0, 8)] + ' ' ) ];
+	var suffix = l0[lib0.getRandomInt(0, 17)] + l1[lib0.getRandomInt(0, 5)] + l01[lib0.getRandomInt(0, 8)] + l1[lib0.getRandomInt(0, 5)];
 	
 	var dwarfNameMan = prefix[lib0.getRandomInt(0, 1)] + suffix;
 
