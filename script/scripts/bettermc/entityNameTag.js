@@ -1,5 +1,4 @@
 import * as minecraft_main_server from '@minecraft/server';
-import * as minecraft_main_ui from '@minecraft/server-ui';
 import * as villager_names from './entity_names/villager_names.js';
 import * as illager_names from './entity_names/illager_names.js';
 import * as elf_names from './entity_names/elf_names.js';
@@ -11,7 +10,7 @@ export function entityNameTag() {
     const entities = Array.from(minecraft_main_server.world.getDimension("overworld").getEntities())
     for (const entity of entities) {
         if (!entity.hasTag("named")) {
-            if (entity.typeId == 'minecraft:villager_v2' || entity.typeId == 'better:warrior' || entity.typeId == 'better:girl_warrior' || entity.typeId == 'better:villager_witch' || entity.typeId == 'minecraft:witch' || entity.typeId == 'better:archer') {
+            if (entity.typeId == 'minecraft:villager_v2' || entity.typeId == 'better:warrior' || entity.typeId == 'better:girl_warrior' || entity.typeId == 'better:villager_witch' || entity.typeId == 'minecraft:witch' || entity.typeId == 'better:archer' || entity.typeId == 'better:villager_slave') {
                 entity.nameTag = villager_names.generateName()
             } else if (entity.typeId == 'better:count') {
                 entity.nameTag = "Count " + villager_names.generateName() + " of the Castle"
