@@ -15,12 +15,12 @@ export function playerRoadmeet() {
 			player.addEffect(minecraft_main_server.EffectTypes.get('resistance'), 200, {
 				amplifier: 128,
 			});
+			player.addTag("hasJoined");
 			const mogus = dim.overworld.spawnEntity("better:mogus", {
 				x: 0,
 				y: 255,
 				z: 0,
 			});
-			player.addTag("hasJoined");
 		}
 	}
 }
