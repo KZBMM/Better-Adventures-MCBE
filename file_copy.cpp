@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 
-using namespace std;
+using namespace std; //@SplinedWelshman please don't comment!
 // Function to replace all occurrences of a word in a string
 
 
@@ -33,7 +33,7 @@ void editjson(string filename) {
     // Open the output file
     std::ofstream outputFile(dir1 + filename);
     if (!outputFile) {
-        std::cerr << "Error: Cannot open output file kopia.txt" << std::endl;
+        std::cerr << "Error: Cannot open output file" << std::endl;
     }
 
     // Read and process the contents line by line
