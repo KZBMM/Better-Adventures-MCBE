@@ -1,3 +1,5 @@
+//This is a simple c++ code made to replace all instances of a certain string in a JSON document with a different string for all files in a given directory.
+//Usefull when there are major changes of namespaces
 #include <iostream>
 #include <fstream>
 #include <string>
