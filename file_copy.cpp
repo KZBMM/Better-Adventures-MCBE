@@ -1,5 +1,5 @@
 //This is a simple c++ code made to replace all instances of a certain string in a JSON document with a different string for all files in a given directory.
-//Usefull when there are major changes of namespaces
+//Usefull when there are major changes done to namespaces/JSON component object names. KZBMM <3.
 #include <iostream>
 #include <fstream>
 #include <string>
