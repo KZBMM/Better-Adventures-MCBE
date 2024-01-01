@@ -1,8 +1,8 @@
 import * as lib0 from '../libraries/getRandomInt';
 
 export function generateNameMan() {
-	let prefix = [ "Now", "El", "Loo", "Al", "Gwa", "Go", "Tör", "Mae", "Elw", "Faen", "Laure", "Á", "E", "L", "Le", "Efe", "Lefe", "Eai", "Olw", "Sead", "Ööval", "Nów", "Coed", "Hal", "Dei", "Rú", "Jõe", "Af", "Ffâ", "N" ];
-	let suffix = [ "saar", "eon", "a'as", "juv", "eas", "daon", "ir", "lau", "viku", "dhros", "findelë", "hael", "noro", "on", "leon", "leas", "las", "glas", "und", "gus", "ë", "den", "en", "len", "ap", "mil", "ain", "ë"  ];
+	let prefix = [ "Now", "El", "Loo", "Al", "Gwa", "Go", "Tör", "Mae", "Elw", "Faen", "Laure", "Aa", "E", "L", "Le", "Efe", "Lefe", "Eai", "Olw", "Sead", "Ööval", "Nów", "Koen", "Hal", "Dei", "Rú", "Jõe", "Af", "Ffaa", "N" ];
+	let suffix = [ "saar", "eon", "ääs", "juv", "eas", "daon", "ir", "lau", "viku", "dhros", "findelë", "hael", "noro", "on", "leon", "leas", "las", "glas", "und", "gus", "ë", "den", "en", "len", "ap", "mil", "ain", "ë"  ];
 	let surnamePrefix = [ "an ", 'seni ', "", "", '', '', '', '', '', '', '', '' ]
 	let chooseSurname = surnamePrefix[lib0.getRandomInt(0, 11)] + prefix[lib0.getRandomInt(0, 29)] + suffix[lib0.getRandomInt(0, 27)]
 	let selectSurname = [ '', (' ' + chooseSurname) ];

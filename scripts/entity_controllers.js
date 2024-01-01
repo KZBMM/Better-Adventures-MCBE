@@ -1,5 +1,6 @@
 import * as minecraft_main_server from '@minecraft/server';
 import * as dim from './libraries/dimension';
+import * as lib0 from './libraries/getRandomInt';
 
 let hb = {
   is_at_power: true
@@ -34,6 +35,8 @@ export function checkEntity(entity) {
 			case 'better:dark_boss':
 			case 'better:dark_death':
 			case 'hb:hbb':
+			case 'hb:hbl':
+			case 'better:spawn_entity_hb':
 				entity.teleport(
 					{ 
 						x: entity.getHeadLocation().x,
@@ -41,7 +44,7 @@ export function checkEntity(entity) {
 						z: entity.getHeadLocation().z,
 					}
 				);
-				entity.kill();
+				entity.remove();
 				break;
 			case 'better:herobrine':
 				hb.is_at_power = true;
@@ -61,5 +64,18 @@ export function checkDeadEntity(deadEntity) {
 			for (const player of players) {
 				player.addTag("hasKilledHb");
 			}
+	}
+}
+
+export function checkEntitySpawner(entity) {
+	switch (entity.typeId) {
+		case 'better:spawn_midge':
+			for (let i = 0; i < lib0.getRandomInt(1, 5); i++) {
+				let midge = dim.overworld.spawnEntity('better:midge', entity.getHeadLocation());
+			}
+			entity.remove();
+			break;
+		default:
+			
 	}
 }

@@ -11,19 +11,22 @@ export function entityNameTag(entity) {
     if (!entity.hasTag("named")) {
 		switch (entity.typeId) {
 			case 'minecraft:villager_v2':
+				entity.nameTag = villager_names.generateChooseName(entity);
+				break;
 			case 'better:warrior':
+			case 'better:archer':
+				entity.nameTag = villager_names.generateNameMale();
+				break;
+			case 'better:count':
+				entity.nameTag = "Count " + villager_names.generateNameMale() + " of the Castle";
+				break;
+			case 'better:heavy':
+				entity.nameTag = "Knight " + villager_names.generateNameMale() + " of the Village";
+				break;
   			case 'better:girl_warrior':
  			case 'better:villager_witch':
   			case 'minecraft:witch':
-			case 'better:archer':
-			case 'better:villager_slave':
-				entity.nameTag = villager_names.generateName();
-				break;
-			case 'better:count':
-				entity.nameTag = "Count " + villager_names.generateName() + " of the Castle";
-				break;
-			case 'better:heavy':
-				entity.nameTag = "Knight " + villager_names.generateName() + " of the Village";
+				entity.nameTag = villager_names.generateNameFemale();
 				break;
 			case 'minecraft:pillager':
 			case 'minecraft:vindicator':
@@ -64,10 +67,13 @@ export function entityNameTag(entity) {
 			case 'better:alpine_dwarf_warrior':
 			case 'better:mountain_dwarf_in_tavern':
 			case 'better:mountain_dwarf_male':
+			case 'better:shepherd_dwarf_male':
+			case 'better:shepherd_dwarf_sheepmaster':
 			case 'better:mountain_dwarf_warrior':
 				entity.nameTag = dwarf_names.generateNameMan();
 				break;
 			case 'better:alpine_dwarf_female':
+			case 'better:shepherd_dwarf_female':
 			case 'better:mountain_dwarf_female':
 				entity.nameTag = dwarf_names.generateNameWoman();
 				break;
