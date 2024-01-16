@@ -66,16 +66,3 @@ export function checkDeadEntity(deadEntity) {
 			}
 	}
 }
-
-export function checkEntitySpawner(entity) {
-	switch (entity.typeId) {
-		case 'better:spawn_midge':
-			for (let i = 0; i < lib0.getRandomInt(1, 5); i++) {
-				let midge = dim.overworld.spawnEntity('better:midge', entity.getHeadLocation());
-			}
-			entity.remove();
-			break;
-		default:
-			
-	}
-}
