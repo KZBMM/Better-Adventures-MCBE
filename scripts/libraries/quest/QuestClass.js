@@ -62,9 +62,8 @@ export function Gather(selectedPlayer) {
 	}
 }
 
-//Slayyyy
+//Slayyyy Quest Class
 //Wtf
-//French Republik
 //Basically a Hunt Quest -->
 
 export function Hunt(selectedPlayer) {
@@ -90,9 +89,16 @@ export function Hunt(selectedPlayer) {
 		form.show(selectedPlayer).then((response) => {
 			switch (response.selection) {
 				case 0:
-					
+					if (selectedPlayer.getDynamicProperty("better:hunt_quest_killed_entities") >= this.killEntityAmount) {
+						selectedPlayer.runCommandAsync('title @s title Quest Completed');
+						this.terminateQuest();
+						let itemHeld = new minecraft_main_server.ItemStack(this.returnItemType, 1);
+						selectedPlayer.getComponent("minecraft:equippable").setEquipment(minecraft_main_server.EquipmentSlot.Mainhand, itemHeld);
+					} else {
+						selectedPlayer.runCommandAsync('title @s actionbar You have not slayed enough wnated mobs to complete the quest.');
+					}
 					break;
-				
+
 				case 1:
 					selectedPlayer.runCommandAsync('title @s title Quest Abandoned');
 					this.terminateQuest();
